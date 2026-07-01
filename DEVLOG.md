@@ -61,6 +61,28 @@ LiDAR options, the idea of reusing the LiDAR sensor from a broken iPhone
     of a *broken* sensor), but is worth tracking as the closest thing to
     "someone already using iPhone LiDAR outside the box."
 
+### Confirmed: exact chip breakdown of the LiDAR module
+
+Verified against real sources (TechInsights, System Plus Consulting/Yole,
+CNBC) — this is a real breakthrough, since it turns "the iPhone's LiDAR chip"
+from a generic unknown into a specific, searchable set of parts:
+
+| Component | Manufacturer | Notes |
+|---|---|---|
+| ToF sensor (SPAD array) | **Sony** | Sony IMX591 family, ~10.1µm pixel pitch. Sony won this socket over STMicroelectronics (who supplied the older Face ID proximity sensor) |
+| VCSEL emitter | **Lumentum** | Custom multi-electrode design, >$100M deal with Apple from this alone |
+| VCSEL driver IC | **Texas Instruments** | WLCSP (wafer-level chip-scale package), 5-side molded |
+| Diffractive optical element (DOE) | **Himax** | Sits on top of the VCSEL, creates the dot pattern |
+
+First appeared in the 2020 iPad Pro, carried over unchanged to iPhone 12 Pro.
+
+Note: exact resolution figure is slightly inconsistent across sources (one
+says "0.01MP" ≈ 10,000 px, a secondary summary said "30K array") — minor
+discrepancy, doesn't affect the manufacturer identification above.
+
+Next step this unlocks: search for the **Sony IMX591** datasheet/interface
+docs directly, instead of searching generically for "iPhone LiDAR chip."
+
 ---
 
 _Each session adds a new entry below with the date and what was done._
