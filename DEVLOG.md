@@ -111,6 +111,23 @@ depth data payload, I2C/I3C for config/control) — since Apple's own chip
 shares the same sensor architecture, just customized/relabeled. This is a
 much better starting point than reverse-engineering from zero.
 
+### Follow-up checks: dev kit availability + physical connector
+
+- **No dev kit / breakout board found for IMX459 or IMX479.** Framos sells
+  evaluation kits for many other Sony sensors (IMX412, IMX415, IMX455 — the
+  common Raspberry Pi/industrial camera ones), but nothing for these two.
+  Makes sense: they're B2B-only parts sold directly to automotive LiDAR
+  manufacturers, not stocked for hobbyist purchase. Getting one to experiment
+  with won't be as simple as ordering from a normal distributor.
+- **No public pinout found for the iPhone's LiDAR module connector.**
+  Confirmed it's a friction-fit connector (no screws), and that the iPhone 12
+  (non-Pro) and 12 Pro share the same camera socket design despite different
+  camera counts — but no pin-level documentation surfaced anywhere.
+- Net effect: the chip identity (Sony SPAD family + MIPI CSI-2 protocol) is
+  now solid, but the *practical path to get hands-on with the same silicon
+  cheaply* is still an open problem — automotive parts aren't hobbyist-
+  accessible the way Raspberry Pi camera sensors are.
+
 ---
 
 _Each session adds a new entry below with the date and what was done._
