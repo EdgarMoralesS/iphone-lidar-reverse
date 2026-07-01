@@ -83,6 +83,34 @@ discrepancy, doesn't affect the manufacturer identification above.
 Next step this unlocks: search for the **Sony IMX591** datasheet/interface
 docs directly, instead of searching generically for "iPhone LiDAR chip."
 
+### Public commercial equivalent found — biggest lead so far
+
+The exact Apple-customized chip (IMX590 for 12/13/14 Pro, IMX591 for 15 Pro
+Max) has no public datasheet — Apple's version is proprietary/restricted, and
+firms like TechInsights only sell the teardown data as expensive paid reports.
+
+However, Sony sells **the same underlying 10µm SPAD Cu-Cu-stacked dToF
+architecture** commercially for the automotive/industrial market, under
+different part numbers, with real public documentation:
+
+- **Sony IMX459** — automotive-grade stacked SPAD dToF sensor, 597x168
+  (~100K pixels), 300m range, 905nm, ~6ns response. Distributed by
+  RESTAR FRAMOS Technologies. Public brief datasheet found:
+  [IMX459-AAMV-W-Rev.0.005 (PDF)](https://www.sunnywale.com/uploadfile/2024/0517/IMX459-AAMV-W-Rev.0.005_BSY%E7%AE%80%E4%BB%8B.pdf)
+- **Sony IMX479** — similar family, up to 20fps, 520 dToF pixels using
+  3x3 SPAD pixel groups for accuracy.
+
+**Confirmed interface (verified against multiple sources):** MIPI CSI-2
+serial output, 4-lane or 2-lane configurable, 10/12-bit RAW data, up to 60fps
+support in the interface itself. Power: 3.3V (analog), 1.1V (digital), 1.8V
+(interface I/O).
+
+**Why this matters:** these are the closest real, publicly-documented proxy
+for how the Apple LiDAR chip actually talks over the wire (MIPI CSI-2 for the
+depth data payload, I2C/I3C for config/control) — since Apple's own chip
+shares the same sensor architecture, just customized/relabeled. This is a
+much better starting point than reverse-engineering from zero.
+
 ---
 
 _Each session adds a new entry below with the date and what was done._
