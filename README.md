@@ -24,11 +24,10 @@ step, session by session, and it might take years. That's fine.
 
 - ✅ Own hardware: broken iPhones purchased/acquired by the author, or loose parts
 - ✅ Documenting the full process, unrushed, failures included
-- ❌ NOT a project to build a full AGV from scratch (explicitly ruled out —
-  direct conflict of interest with the author's day job working on Dahua/
-  Hikvision AGVs)
+- ❌ NOT a project to build a full AGV/robot from scratch (explicitly ruled out —
+  conflict of interest with unrelated professional work)
 - ❌ Does NOT involve copying/extracting proprietary third-party software
-  (Apple, Dahua, etc.)
+  (Apple or anyone else's)
 
 ## Current status
 

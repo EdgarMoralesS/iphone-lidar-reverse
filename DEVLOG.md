@@ -9,8 +9,8 @@ _Chronological, append-only log. Old entries are never edited — each session a
 ### How this started
 
 Came up while discussing building a DIY AGV (ROS + Nav2 + LiDAR) as a learning
-project, separate from real work with Dahua/Hikvision AGVs. While looking at
-cheap LiDAR options, the idea of reusing the LiDAR sensor from a broken iPhone
+project, separate from unrelated professional work. While looking at cheap
+LiDAR options, the idea of reusing the LiDAR sensor from a broken iPhone
 (12 Pro and later) came up — researched and confirmed:
 
 - The sensor is "parts paired" to the specific device's serial number
@@ -24,7 +24,7 @@ cheap LiDAR options, the idea of reusing the LiDAR sensor from a broken iPhone
 - Open-ended research project, no deadline — could take years, that's fine
 - Own hardware only (purchased/acquired broken iPhones), nothing third-party
 - Building a full AGV was explicitly ruled out — conflict of interest with
-  current day job on Dahua/Hikvision AGVs
+  unrelated professional work
 - Public repo from day 1 — legal risk assessed as low (reverse-engineering own
   hardware, with "right to repair" precedent in favor), documenting everything
   transparently (failures included)
